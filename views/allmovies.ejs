@@ -1,0 +1,29 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All Movies</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body id="all-movies-page">
+  <%- include("partials/header") %>
+  <main>
+    <h1>All Movies</h1>
+    <section class="media-section">
+      <div class="media-grid">
+        <% movies.forEach(movie => { %>
+          <article class="media-card">
+            <a href="/details/<%= movie._id %>">
+              <img src="<%= movie.smallPoster %>" alt="<%= movie.title %>">
+              <h3><%= movie.title %></h3>
+            </a>
+          </article>
+        <% }) %>
+      </div>
+    </section>
+  </main>
+  <%- include("partials/footer") %>
+</body>
+</html>

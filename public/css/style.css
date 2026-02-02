@@ -1,0 +1,187 @@
+body {
+  background-color:#6a2dc6;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* HEADER SECTION STYLES */
+
+
+
+#main-header {
+  margin-top: 50px;
+
+}
+
+
+.nav-list {
+
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-direction: horizontal;
+  justify-content: space-evenly;
+
+}
+
+
+/* HERO SECTION STYLES */
+
+#hero-section {
+  text-align: center;
+  padding: 40px;
+  background-color:#261342; 
+  border-radius: 10px;
+  color: white;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-slide {
+  display: flex;
+  width: 400%;
+  animation: slide 12s infinite;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover; /* keeps images properly sized */
+}
+
+/* Animation to slide through images */
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  33%  { transform: translateX(-100%); }
+  66%  { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
+/* LISTING SECTION STYLES- for home page, movie listing page, and tv show page */
+
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.media-grid article{ /* stylizing articles */
+  
+  width: 100%;
+  height:auto ;
+  border-radius: 10px;
+  background-color: #261342;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+
+}
+
+.media-grid img { /* Resizing images */
+
+  width: 100%;
+  height: auto;
+  object-fit: cover; 
+  
+}
+
+
+.promo-grid img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover; 
+}
+
+/* STYLING FOR ALLMOVIES AND TVSHOWS  */
+
+
+.view-all-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view-all-btn {
+  background-color: #6a2dc6;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.view-all-btn:hover {
+  background-color: #271148;
+}
+
+
+/* styling specifically for home page */
+
+
+
+#featured-movies {
+  
+  margin-top: 100px;
+  
+
+}
+
+
+#featured-tvshows {
+  
+  margin-top: 100px;
+  
+
+}
+
+
+/* styling specifically for home page */
+
+#tvshows-list{
+
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#tvshows-main{
+
+   margin-top: 30px;
+
+}
+
+/* ABOUT SECTION STYLES */
+
+#content-info {
+  
+  margin-top: 100px;
+
+}
+
+/* FOOTER SECTION STYLES */
+
+#footer  { /* horizontal arrangment */
+
+  background-color: #381c62;
+  display: flex;
+  flex-direction: horizontal;
+  gap: 7px;
+  justify-content: space-evenly;
+  margin-top: 75px;
+  width: 100%;
+  
+}
+
+
+
+
+

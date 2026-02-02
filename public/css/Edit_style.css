@@ -1,0 +1,51 @@
+body{
+  background-color:#6a2dc6;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* HEADER SECTION STYLES */
+
+
+
+#main-header {
+  margin-top: 50px;
+
+}
+
+
+.nav-list {
+
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-direction: horizontal;
+  justify-content: space-evenly;
+
+}
+
+/* FORM SECTION STYLES */
+
+#edit-form {  /* to arrange in vertical order*/
+
+  display:flex;
+  flex-direction: column;
+  justify-items: auto;
+  gap:15px;
+
+}
+
+
+#edit-form input ,
+#edit-form textarea,
+#edit-form button { width: 200px;} /* to resize input boxes */
+
+
+.delete-container{
+
+   margin-top: 30px;
+   margin-bottom: 100px;
+
+}
+

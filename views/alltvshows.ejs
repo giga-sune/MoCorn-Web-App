@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All TV Shows</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body id="all-tvshows-page">
+  <%- include("partials/header") %>
+  <main>
+    <h1>All TV Shows</h1>
+    <section class="media-section">
+      <div class="media-grid">
+        <% tvshows.forEach(show => { %>
+          <article class="media-card">
+            <a href="/details/<%= show._id %>">
+              <img src="<%= show.smallPoster %>" alt="<%= show.title %>">
+              <h3><%= show.title %></h3>
+            </a>
+          </article>
+        <% }) %>
+      </div>
+    </section>
+  </main>
+  <%- include("partials/footer") %>
+</body>
+</html>

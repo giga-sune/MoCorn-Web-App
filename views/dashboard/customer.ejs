@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Dashboard - MoCorn</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<%- include("../partials/header") %>
+
+
+<main>
+<section>
+<h1>Customer Dashboard</h1>
+<p>Welcome <%= currentUser.firstName %> <%= currentUser.lastName %></p>
+</section>
+
+
+<section>
+<ul>
+<li><a href="/">Go to Home </a></li>   
+<li><a href="/movielisting">Browse Movies</a></li>
+<li><a href="/tvlisting">Browse TV Shows</a></li>
+</ul>
+</section>
+</main>
+
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies Listing</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body id="movies-page">
+
+  <%- include("partials/header") %>
+
+  <main>
+    <h1>Movies</h1>
+    <section id="movies-list" class="media-section">
+      <div class="media-grid">
+        
+        <% if (movies && movies.length > 0) { %>
+          <% movies.forEach(movie => { %>
+            <article class="media-card">
+              <a href="/details/<%= movie._id %>">
+                <img src="<%= movie.smallPoster %>" alt="Movie Poster">
+                <h3><%= movie.title %></h3>
+              </a>
+            </article>
+
+          
+          <% }) %>
+        <% } else { %>
+          <p>No movies available right now.</p>
+        <% } %>
+      </div>
+
+      <div class="view-all-container">
+          <a href="/allmovies" class="view-all-btn">View All Movies</a>
+          </div>
+    </section>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Movie or TV Show</title>
+  <link rel="stylesheet" href="/css/Create_style.css">
+</head>
+
+<body id="create-page">
+
+  <%- include("partials/header") %>
+
+  <main>
+    <section id="create-section" class="create-section">
+      <h1>Create New Movie / TV Show</h1>
+
+      <form id="create-form" action="/create" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" placeholder="Enter title" required>
+
+        <label for="synopsis">Synopsis:</label>
+        <textarea id="synopsis" name="synopsis" rows="4" placeholder="Enter synopsis" required></textarea>
+
+        <label for="genre">Category / Genre:</label>
+        <input type="text" id="genre" name="genre" placeholder="e.g. Action, Drama" required>
+
+        <label for="rating">Rating (1–5):</label>
+        <input type="number" id="rating" name="rating" min="1" max="5" step="0.1" placeholder="Enter rating" required>
+
+        <label for="smallPoster">Small Poster URL:</label>
+        <input type="text" id="smallPoster" name="smallPoster" placeholder="Enter small poster image URL">
+
+        <label for="largePoster">Large Poster URL:</label>
+        <input type="text" id="largePoster" name="largePoster" placeholder="Enter large poster image URL">
+
+        <label for="trailerLink">YouTube Trailer Link:</label>
+        <input type="text" id="trailerLink" name="trailerLink" placeholder="Paste YouTube trailer URL">
+
+        <label for="price">Rental Price (per day):</label>
+        <input type="number" id="price" name="priceperday" step="0.01" placeholder="Enter price" required>
+
+        <div class="checkbox-group">
+          <label>
+            <input type="checkbox" id="isMovie" name="isMovie" value="true">
+            This is a Movie and not a Tv show 
+          </label>
+
+          <label>
+            <input type="checkbox" id="isFeatured" name="isFeatured" value="true">
+            Feature this on the Home Page
+          </label>
+        </div>
+
+        <button type="submit" id="create-btn">Create Media</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>

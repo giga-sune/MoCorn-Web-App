@@ -1,0 +1,55 @@
+body {
+  background-color:#6a2dc6;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* HEADER SECTION STYLES */
+
+
+
+#main-header {
+  margin-top: 50px;
+
+}
+
+
+.nav-list {
+
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-direction: horizontal;
+  justify-content: space-evenly;
+
+}
+
+/* FORM SECTION STYLES */
+
+#create-form {  /* to arrange in vertical order*/
+
+  display:flex;
+  flex-direction: column;
+  justify-items: auto;
+  gap:15px;
+
+}
+
+
+#create-form input ,
+#create-form textarea,
+#create-form button { width: 200px;} /* to resize input boxes */
+
+#create-section{
+
+
+}
+
+#create-section {
+
+  margin-bottom: 60px;
+
+
+
+}

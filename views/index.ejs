@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoCorn - Watch movies and TV shows online</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body id="indexB">
+
+  <%- include("partials/header") %>
+
+  <main id="home-page">
+
+    <!-- Hero Section -->
+    <section id="hero-section" class="section">
+      <h1>Welcome to MoCorn</h1>
+      <p>Browse, discover, and manage your favorite Movies & TV Shows.</p>
+
+      <div class="carousel-container">
+        <div class="carousel-slide">
+          <% if (featuredImages && featuredImages.length > 0) { %>
+            <% featuredImages.forEach(img => { %>
+              <img src="<%= img %>" alt="Featured Movie">
+            <% }) %>
+          <% } else { %>
+            <img src="/img/img1.jpg" alt="Default Featured Movie">
+          <% } %>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Movies -->
+    <section id="featured-movies" class="section">
+      <h2>Featured Movies</h2>
+      <div class="media-grid">
+        <% if (featuredMovies && featuredMovies.length > 0) { %>
+          <% featuredMovies.forEach(movie => { %>
+            <article class="media-card">
+              <img src="<%= movie.smallPoster %>" alt="Movie Poster">
+              <h3><%= movie.title %></h3>
+            </article>
+          <% }) %>
+        <% } else { %>
+          <p>No featured movies available.</p>
+        <% } %>
+      </div>
+    </section>
+
+    <!-- Featured TV Shows -->
+    <section id="featured-tvshows" class="section">
+      <h2>Featured TV Shows</h2>
+      <div class="media-grid">
+        <% if (featuredTV && featuredTV.length > 0) { %>
+          <% featuredTV.forEach(show => { %>
+            <article class="media-card">
+              <img src="<%= show.smallPoster %>" alt="TV Show Poster">
+              <h3><%= show.title %></h3>
+            </article>
+          <% }) %>
+        <% } else { %>
+          <p>No featured TV shows available.</p>
+        <% } %>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section id="content-section" class="section">
+      <h2>Hollywood Spotlight</h2>
+      <div class="promo-grid">
+        <img src="/img/actors_spotlight.webp" alt="Actor's Spotlight" class="promo-banner">
+        <img src="/img/cinema_spotlight.jpg" alt="Cinema Spotlight" class="promo-banner">
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="content-info" class="section">
+      <h2>About MoCorn</h2>
+      <p>
+        MoCorn is your one-stop entertainment catalog. Explore trending movies, 
+        check details, and manage your own media collection.
+      </p>
+    </section>
+
+  </main>
+
+  <%- include("partials/footer") %>
+
+</body>
+</html>

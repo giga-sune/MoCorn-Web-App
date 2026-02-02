@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Shows Listing</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body id="tvshows-page">
+
+  <%- include("partials/header") %>
+
+  <main id="tvshows-main">
+    <h1>TV Shows</h1>
+    <section id="tvshows-list" class="media-section">
+      <div id="tvshows-grid"   class="media-grid">
+
+        <% if ( tvshows && tvshows.length > 0) { %>
+          <% tvshows.forEach(show => { %>
+            <article class="media-card">
+              <a href="/details/<%= show._id %>">
+                <img src="<%= show.smallPoster %>" alt="TV Show Poster">
+                <h3><%= show.title %></h3>
+              </a>
+            </article>
+            
+            
+          <% }) %>
+        <% } else { %>
+          <p>No TV shows available right now.</p>
+        <% } %>
+
+      </div>
+
+      <div class="view-all-container">
+            <a href="/alltvshows" class="view-all-btn">View All TV Shows</a>
+            </div>
+    </section>
+  </main>
+
+</body>
+</html>
